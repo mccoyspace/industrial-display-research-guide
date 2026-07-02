@@ -33,4 +33,6 @@ The guide uses explicit evidence labels such as `[datasheet]`, `[vendor page]`, 
 
 ## License
 
-No public reuse license has been selected yet.
+Copyright (c) 2026 Jennifer and Kevin McCoy.
+
+This work is licensed under the [Creative Commons Attribution 4.0 International License](LICENSE) (CC BY 4.0).
