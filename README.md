@@ -18,6 +18,17 @@ Edit the Markdown source files first, then rebuild the PDF:
 make pdf
 ```
 
+The PDF is built by `build_pdf.py` (WeasyPrint): a designed single layout with cover page, linked table of contents with page numbers, and the two reports as Part I and Part II.
+
+One-time setup:
+
+```sh
+brew install pango   # macOS only — WeasyPrint's rendering backend
+make deps            # installs weasyprint + markdown via pip
+```
+
+The layout prefers the Liberation font family (standard on Linux) and falls back to Helvetica Neue/Georgia/Menlo on macOS; install the Liberation fonts for output identical to the Linux build.
+
 Commit both the Markdown updates and the regenerated PDF so the browser-readable and downloadable versions stay in sync.
 
 ## Evidence Labels
@@ -29,7 +40,9 @@ The guide uses explicit evidence labels such as `[datasheet]`, `[vendor page]`, 
 - `contemporary-artists-guide-to-industrial-displays.md` - main guide
 - `panel-pc-buying-guide.md` - companion panel PC report
 - `contemporary-artists-guide-to-industrial-displays.pdf` - combined PDF
-- `Makefile` - helper command for rebuilding the PDF from the Markdown sources
+- `build_pdf.py` - PDF layout and build script (WeasyPrint)
+- `requirements.txt` - Python dependencies for the build
+- `Makefile` - helper commands (`make pdf`, `make deps`)
 
 ## License
 
